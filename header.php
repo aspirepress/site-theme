@@ -12,7 +12,6 @@
     <![endif]-->
     <?php wp_head(); ?>
     <link href="https://fonts.googleapis.com/css?family=Lato:300|PT+Serif:400,400i,700,700i" rel="stylesheet">
-    <link rel="me" href="https://phpc.social/@sarah" />
 
 </head>
 
