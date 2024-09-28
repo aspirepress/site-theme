@@ -8,7 +8,7 @@ add_theme_support( 'custom-logo');
 add_action('wp_enqueue_scripts', function () {
     // Styles
     $dependencies = [
-        'bootstrap' => '/vendor/css/bootstrap.min.css',
+        'bootstrap' => '/vendordir/css/bootstrap.min.css',
     ];
     foreach ($dependencies as $name => $path) {
         wp_register_style($name, get_template_directory_uri() . $path, [], '3.37');
@@ -17,7 +17,7 @@ add_action('wp_enqueue_scripts', function () {
 
     // Scripts
     $dependencies = ['jquery'];
-    wp_enqueue_script('bootstrap', get_template_directory_uri().'/vendor/js/bootstrap.min.js', ['jquery'], '3.3.7', true);
+    wp_enqueue_script('bootstrap', get_template_directory_uri().'/vendordir/js/bootstrap.min.js', ['jquery'], '3.3.7', true);
     wp_enqueue_script('akrabat3-script', get_template_directory_uri().'/script.js', ['bootstrap'], '1.0.0', true);
 });
 
