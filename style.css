@@ -241,6 +241,9 @@ footer .blog-nav .menu-item a:focus {
     color: #1385C5FF;
 }
 
+.categories-pill::after {
+    content: " |";
+}
 
 .sidebar {
     font-size: 14px;
