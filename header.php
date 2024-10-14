@@ -37,13 +37,13 @@ if ($custom_logo_url) {
 }
         ?>
         <div style="text-align: center">
-            <div class="h1 blog-title"><a href="/"><?php bloginfo( 'name' ); ?></a></div>
+            <!---<div class="h1 blog-title"><a href="/"><?php bloginfo( 'name' ); ?></a></div>-->
             <?php $description = get_bloginfo( 'description', 'display' ); ?>
             <?php if ($description) : ?>
             <p class="lead blog-description"><?php echo $description ?></p>
             <?php endif ?>
         </div>
-        <div class=nav-menu" style="text-align: center">
+        <div class="nav-menu" style="text-align: center">
         <?php
         wp_nav_menu([
             'theme_location' => 'header-menu',

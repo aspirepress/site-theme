@@ -4,7 +4,7 @@
     <?php //dynamic_sidebar( 'footer-copyright-text' ); ?>
     <?php //if ( is_active_sidebar( 'footer-copyright-text' ) ) { dynamic_sidebar( 'footer-copyright-text' ); } ?>
 
-        <div class="">
+        <div class="footer">
         <ul id="footer-menu" class=" list-inline">
         <?php
         wp_nav_menu([
