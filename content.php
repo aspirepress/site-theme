@@ -7,7 +7,7 @@
             <article id="post-<?php the_ID(); ?>" <?php post_class('blog-post h-entry'); ?>>
             <?php
                 if (is_singular()) :
-                    the_title('<h1 class="post-title page-header p-name">', '</h1>');
+                    //Do Nothing
                 else :
                     $type = '';
                     if (is_search()) {

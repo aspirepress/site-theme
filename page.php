@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-        <div class="col-sm-9 blog-main">
-
+        <div class="container blog-main">
+          
             <?php if ( have_posts() ) : ?>
             <?php while ( have_posts() ) : the_post() ?>
                 <?php get_template_part('content', get_post_format()) ?>
@@ -17,7 +17,7 @@
           </nav>
 
         </div>
-    <?php get_sidebar(); ?>
+
 
 <?php get_footer(); ?>
 <!-- page.php -->

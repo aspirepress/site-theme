@@ -4,7 +4,7 @@ Theme URI: https://aspirepress.org
 Author: Sarah Savage
 Author URI: https://www.sarah-savage.com
 Description: AspirePress Theme 1
-Version: 1.0
+Version: 1.1
 Text Domain: aspirepress-theme
 */
 
@@ -18,8 +18,8 @@ body {
     color: #555;
     background-color: #FFF;
     font-size: 16px;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 100vw;
+    margin: auto;
 }
 
 h1, .h1,
@@ -50,20 +50,20 @@ ul {
 }
 
 a, a:visited, a:focus, .required {
-    color: #07a2ff;
+    color: #182b49;
     text-decoration: underline;
 }
 
 a:hover {
-    color: #1385C5FF;
+    color: #6eb9e3;
     text-decoration: none;
 }
 
 .meta a {
-    color: #999;
+    color: #182b49;
 }
 .meta a:hover {
-    color: #244e74;
+    color: #6eb9e3;
 }
 
 h1 a, .h1 a,
@@ -86,7 +86,7 @@ h6 a, .h6 a {
 
 
 .btn, button, input[type="submit"] {
-    color: #14446c;
+    color: #182b49;
 }
 
 ul {
@@ -110,9 +110,9 @@ p tt {
  * Override Bootstrap's default container.
  */
 
-@media (min-width: 1200px) {
+@media (min-width: 100vw) {
     .container {
-        width: 970px;
+        width: 90vw;
     }
 }
 
@@ -122,7 +122,7 @@ p tt {
  */
 
 .blog-masthead {
-    background-color: #14446c /*#57B1CA*/ /*#428bca*/;
+    background-color: #fff /*#57B1CA*/ /*#428bca*/;
     -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
     box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
     margin-bottom: 20px;
@@ -138,7 +138,7 @@ p tt {
     display: inline-block;
     padding: 10px;
     font-weight: 500;
-    color: #3eb5f8 /*#cdddeb*/;
+    color: #182b49 /*#cdddeb*/;
 }
 
 ul.blog-nav > li:first-child a {
@@ -147,26 +147,25 @@ ul.blog-nav > li:first-child a {
 
 .blog-nav .menu-item a:hover,
 .blog-nav .menu-item a:focus {
-    color: #fff;
+    color: #6eb9e3;
     text-decoration: none;
 }
 
 /* Active state gets a caret at the bottom */
 .blog-nav .current-menu-item a {
-    color: #fff;
+    color: #6eb9e3;
 }
 .blog-nav .current-menu-item a:after {
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: 45%;
     width: 0;
     height: 0;
     margin-left: -5px;
     vertical-align: middle;
-    content: " ";
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid;
-    border-left: 5px solid transparent;
+    content: "";
+    border: 4px solid;
+    border-radius: 4px;
 }
 
 
@@ -174,23 +173,25 @@ ul.blog-nav > li:first-child a {
  * Footer
  */
 
-footer .blog-nav .menu-item a {
-    color: #198ccb;
+.footer #footer-menu .menu-item a {
+    color: #182b49;
     padding: 0;
 }
-footer .blog-nav .menu-item a:hover,
-footer .blog-nav .menu-item a:focus {
-    color: #14446c;
+.footer #footer-menu .menu-item a:hover,
+.footer #footer-menu .menu-item a:focus {
+    color: #6eb9e3;
 }
 
 .blog-footer {
     padding: 20px 0;
     color: #999;
+    background-color: #fff;
     text-align: center;
     /*background-color: #f9f9f9;*/
     /*border-top: 1px solid #e5e5e5;*/
-    border-top: 1px solid #1385C5FF;
+    border-top: 1px solid #999;
 }
+
 /*.blog-footer p:last-child {
     margin-bottom: 0;
 }
@@ -205,6 +206,12 @@ footer .blog-nav .menu-item a:focus {
     /*padding-top: 20px;*/
     /*padding-bottom: 20px;*/
 }
+
+.blog-header img {
+    width: 200px;
+    padding-top: 10px;
+}
+
 .blog-title {
     margin-top: 30px;
     margin-bottom: 0;
@@ -221,7 +228,7 @@ footer .blog-nav .menu-item a:focus {
 .blog-description {
     font-size: 20px;
     /*color: #999;*/
-    color: #fff;
+    color: #000;
     font-family: "Lato", sans-serif;
     font-weight: 300;
 }
@@ -234,6 +241,8 @@ footer .blog-nav .menu-item a:focus {
 .blog-main {
     /*font-size: 16px;*/
     line-height: 1.5;
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 
 
