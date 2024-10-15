@@ -1,22 +1,10 @@
-<?php
-/**
- * The template for displaying all single posts
- */
-?>
 <?php get_header(); ?>
-  
-        <div class="col-sm-12 blog-main">
 
-            
+        <div class="col-sm-12 blog-main">
+          
             <?php if ( have_posts() ) : ?>
             <?php while ( have_posts() ) : the_post() ?>
-                <?php get_template_part('article', get_post_format()) ?>
-
-
-                
-
-                <?php comments_template(); ?>
-                <?php akrabat3_post_nav(); ?>
+                <?php get_template_part('content-home', get_post_format()) ?>
             <?php endwhile; ?>
             <?php endif; ?>
 
@@ -31,6 +19,5 @@
         </div>
 
 
-
 <?php get_footer(); ?>
-<!-- single.php -->
+<!-- page.php -->

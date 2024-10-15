@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-        <div class="col-sm-9 blog-main">
+        <div class="col-sm-12 blog-main">
           <h1>Latest News</h1>
 
             <?php if ( have_posts() ) : ?>
