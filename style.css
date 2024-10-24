@@ -173,7 +173,7 @@ ul.blog-nav > li:first-child a {
 }
 
 .blog-nav .menu-item-has-children:hover > .sub-menu {
-    display: inline;
+    display: inline-block;
     width: 100%;
     color: #6eb9e3;
 
