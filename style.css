@@ -133,10 +133,19 @@ p tt {
 }
 
 /* Nav links */
+.blog-nav .menu-item {
+    margin-bottom: 0;
+}
+
+
+.blog-nav .menu-item {
+    position: relative;
+}
+
 .blog-nav .menu-item a {
     position: relative;
     display: inline-block;
-    padding: 10px;
+    padding: 10px 10px 15px;
     font-weight: 500;
     color: #182b49 /*#cdddeb*/;
 }
@@ -173,16 +182,15 @@ ul.blog-nav > li:first-child a {
 }
 
 .blog-nav .menu-item-has-children:hover > .sub-menu {
-    display: inline-block;
-    width: 100%;
+    display: block;
     color: #6eb9e3;
 
 }
 
-.sub-menu {
+.blog-nav .sub-menu {
     display: none;
     position: absolute;
-    top: 0;
+    top: 47px;
     left: 0;
     z-index: 999;
     background-color: #fff;
@@ -190,6 +198,22 @@ ul.blog-nav > li:first-child a {
     border-top: none;
     padding: 0;
     margin: 0;
+    width: 240px;
+    list-style: none;
+    box-shadow: 0px 5px 5px #ccc;
+}
+
+.blog-nav .sub-menu li {
+    text-align: left;
+}
+
+.blog-nav .sub-menu li a {
+    padding: 5px 10px;
+}
+
+.blog-nav .sub-menu li a:after {
+    content: '';
+    display: none;
 }
 
 /*
