@@ -290,6 +290,12 @@ ul.blog-nav > li:first-child a {
     line-height: 1.5;
     padding-left: 10vw;
     padding-right: 10vw;
+    width: 100%;
+    max-width: calc( 75ch + 10vw + 10vw);
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    overflow: hidden;
 }
 
 
@@ -668,4 +674,44 @@ code {
     color: inherit;
     background-color: #e9ebec;
     border: none;
+}
+
+@media screen and (max-width: 450px) {
+	.comment-body {
+        	padding-bottom: 2.5rem;
+        	margin-bottom: 30px;
+	}
+	.comment-list .comment-metadata {
+		bottom: 0;
+		text-align: left;
+		width: calc( 100% - 90px );
+		line-height: 1.1;
+	}
+}
+
+/* Add all wide width items */
+.alignwide,
+.wp-block-media-text,
+.wp-block-latest-posts__list {
+	max-width: calc( 100% + 8vw + 8vw );
+	margin-left: -8vw;
+	margin-right: -8vw;
+}
+/* Align titles with their wide width blocks */
+h2:has(+ .wp-block-latest-posts__list) {
+	border: red 1px solid;
+	max-width: calc( 100% + 8vw + 8vw );
+	margin-left: -8vw;
+	margin-right: -8vw;
+}
+
+.wp-block-media-text.has-media-on-the-right:not(.has-background) > .wp-block-media-text__content {
+	padding-left: 0;
+}
+
+.page-header,
+.blog h1 {
+    padding-bottom: 9px;
+    margin: 40px 0 40px;
+    border-bottom: none;
 }
