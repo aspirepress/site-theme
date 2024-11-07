@@ -12,7 +12,7 @@ Text Domain: aspirepress-theme
  * Globals
  */
 
-body {
+ body {
     /*font-family: Georgia, "Times New Roman", Times, serif;*/
     font-family: 'PT Serif', Georgia, serif;
     color: #555;
@@ -133,10 +133,19 @@ p tt {
 }
 
 /* Nav links */
+.blog-nav .menu-item {
+    margin-bottom: 0;
+}
+
+
+.blog-nav .menu-item {
+    position: relative;
+}
+
 .blog-nav .menu-item a {
     position: relative;
     display: inline-block;
-    padding: 10px;
+    padding: 10px 10px 15px;
     font-weight: 500;
     color: #182b49 /*#cdddeb*/;
 }
@@ -168,6 +177,44 @@ ul.blog-nav > li:first-child a {
     border-radius: 4px;
 }
 
+.blog-nav .menu-item-has-children a:after {
+    content: " ▼";
+}
+
+.blog-nav .menu-item-has-children:hover > .sub-menu {
+    display: block;
+    color: #6eb9e3;
+
+}
+
+.blog-nav .sub-menu {
+    display: none;
+    position: absolute;
+    top: 47px;
+    left: 0;
+    z-index: 999;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    padding: 0;
+    margin: 0;
+    width: 240px;
+    list-style: none;
+    box-shadow: 0px 5px 5px #ccc;
+}
+
+.blog-nav .sub-menu li {
+    text-align: left;
+}
+
+.blog-nav .sub-menu li a {
+    padding: 5px 10px;
+}
+
+.blog-nav .sub-menu li a:after {
+    content: '';
+    display: none;
+}
 
 /*
  * Footer
@@ -243,6 +290,12 @@ ul.blog-nav > li:first-child a {
     line-height: 1.5;
     padding-left: 10vw;
     padding-right: 10vw;
+    width: 100%;
+    max-width: calc( 75ch + 10vw + 10vw);
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    overflow: hidden;
 }
 
 
@@ -621,4 +674,44 @@ code {
     color: inherit;
     background-color: #e9ebec;
     border: none;
+}
+
+@media screen and (max-width: 450px) {
+	.comment-body {
+        	padding-bottom: 2.5rem;
+        	margin-bottom: 30px;
+	}
+	.comment-list .comment-metadata {
+		bottom: 0;
+		text-align: left;
+		width: calc( 100% - 90px );
+		line-height: 1.1;
+	}
+}
+
+/* Add all wide width items */
+.alignwide,
+.wp-block-media-text,
+.wp-block-latest-posts__list {
+	max-width: calc( 100% + 8vw + 8vw );
+	margin-left: -8vw;
+	margin-right: -8vw;
+}
+/* Align titles with their wide width blocks */
+h2:has(+ .wp-block-latest-posts__list) {
+	border: red 1px solid;
+	max-width: calc( 100% + 8vw + 8vw );
+	margin-left: -8vw;
+	margin-right: -8vw;
+}
+
+.wp-block-media-text.has-media-on-the-right:not(.has-background) > .wp-block-media-text__content {
+	padding-left: 0;
+}
+
+.page-header,
+.blog h1 {
+    padding-bottom: 9px;
+    margin: 40px 0 40px;
+    border-bottom: none;
 }
