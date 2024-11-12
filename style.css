@@ -42,7 +42,7 @@ h5, .h5,
 h6, .h6 {
     margin-top: 22px;
     margin-bottom: 12px;
-    
+
 }
 
 ul {
@@ -89,7 +89,8 @@ h6 a, .h6 a {
     color: #182b49;
 }
 
-ul {
+ul,
+details {
     padding-left: 20px;
 }
 
@@ -699,7 +700,6 @@ code {
 }
 /* Align titles with their wide width blocks */
 h2:has(+ .wp-block-latest-posts__list) {
-	border: red 1px solid;
 	max-width: calc( 100% + 8vw + 8vw );
 	margin-left: -8vw;
 	margin-right: -8vw;
@@ -715,3 +715,15 @@ h2:has(+ .wp-block-latest-posts__list) {
     margin: 40px 0 40px;
     border-bottom: none;
 }
+
+
+details {
+	margin-bottom: 10px;
+}
+details summary:first-of-type {
+	display: list-item;
+	list-style-position: outside;
+	font-weight: bold;
+}
+
+
